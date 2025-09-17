@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import androidx.navigation.findNavController
 
 class DetailFragment : Fragment() {
 
@@ -22,6 +24,12 @@ class DetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val coffeeId = arguments?.getInt(COFFEE_ID, 0) ?: 0
         setCoffeeData(coffeeId)
+
+        // 👉 Back button
+        val backButton = view.findViewById<Button>(R.id.back_button)
+        backButton.setOnClickListener {
+            view.findNavController().navigate(R.id.action_detailFragment_to_listFragment)
+        }
     }
 
     private fun setCoffeeData(id: Int) {
@@ -35,8 +43,16 @@ class DetailFragment : Fragment() {
                 coffeeDesc?.text = getString(R.string.americano_desc)
             }
             R.id.latte -> {
-                coffeeTitle?.text = getString(R.string.latte_title)
+                coffeeTitle?.text = getString(R.string.latte_tittle) //
                 coffeeDesc?.text = getString(R.string.latte_desc)
+            }
+            R.id.espresso -> {
+                coffeeTitle?.text = getString(R.string.espresso_title)
+                coffeeDesc?.text = getString(R.string.espresso_desc)
+            }
+            R.id.cappuccino -> {
+                coffeeTitle?.text = getString(R.string.cappuccino_title)
+                coffeeDesc?.text = getString(R.string.cappuccino_desc)
             }
         }
     }

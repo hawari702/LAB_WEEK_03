@@ -44,7 +44,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="@string/latte_title"
+            android:text="@string/latte_tittle"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- ✅ Tambahan item baru -->
+        <TextView
+            android:id="@+id/espresso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/espresso_title"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/cappuccino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/cappuccino_title"
             android:clickable="true"
             android:focusable="true"/>
     </LinearLayout>

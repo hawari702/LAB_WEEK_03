@@ -21,7 +21,9 @@ class ListFragment : Fragment() {
         val coffeeList = listOf(
             view.findViewById<View>(R.id.affogato),
             view.findViewById<View>(R.id.americano),
-            view.findViewById<View>(R.id.latte)
+            view.findViewById<View>(R.id.latte),
+            view.findViewById<View>(R.id.espresso),     // ✅ baru
+            view.findViewById<View>(R.id.cappuccino)   // ✅ baru
         )
 
         coffeeList.forEach { coffee ->
