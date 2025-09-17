@@ -1,5 +1,4 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// kosong atau kalau mau bisa pakai ini
 plugins {
-    alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.kotlin.android) apply false
+    // tidak perlu alias di root kecuali root buildscript butuh
 }
